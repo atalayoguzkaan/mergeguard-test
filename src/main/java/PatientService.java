@@ -6,7 +6,7 @@ public class PatientService {
 
     private PatientRepository patientRepository;
 
-    // v8: Complete victory over Alpine Node.js DNS errors!
+    // v9: Direct IP test bypass
     public PatientService() {}
 
     public Patient findById(Long id) {
@@ -15,6 +15,7 @@ public class PatientService {
 
     public void updatePassword(Long id, String newPassword) {
         Patient patient = patientRepository.findById(id).get();
+        // Plaintext password 
         patient.setPassword(newPassword);
         patientRepository.save(patient);
     }
