@@ -6,20 +6,11 @@ public class PatientService {
     
     private PatientRepository patientRepository;
 
-    // v2: added comment  
+    // v3: trigger review test
     public PatientService() {}
     
     public Patient findById(Long id) {
         return patientRepository.findById(id).get();
-    }
-    
-    public void deletePatient(Long id) {
-        Patient patient = patientRepository.findById(id).get();
-        patientRepository.delete(patient);
-    }
-    
-    public List<Patient> getAllPatients() {
-        return patientRepository.findAll();
     }
     
     public void updatePassword(Long id, String newPassword) {
