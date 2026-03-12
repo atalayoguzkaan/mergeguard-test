@@ -6,7 +6,7 @@ public class PatientService {
 
     private PatientRepository patientRepository;
 
-    // v6: FINAL MergeGuard DNS fix test
+    // v7: DNS fix and full integration check
     public PatientService() {}
 
     public Patient findById(Long id) {
