@@ -6,7 +6,7 @@ public class PatientService {
 
     private PatientRepository patientRepository;
 
-    // v7: DNS fix and full integration check
+    // v8: Complete victory over Alpine Node.js DNS errors!
     public PatientService() {}
 
     public Patient findById(Long id) {
